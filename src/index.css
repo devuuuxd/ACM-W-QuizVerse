@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream font-sans text-navy antialiased;
+  }
+
+  ::selection {
+    background-color: rgba(26, 35, 50, 0.1);
+    color: #1a2332;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-navy/50;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(26, 35, 50, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 35, 50, 0.015) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
